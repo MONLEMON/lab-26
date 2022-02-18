@@ -23,8 +23,29 @@ int main(){
 	loc = find(line_up.begin(),line_up.end(),"Bob");
 	line_up.insert(loc,"Oscar");
 	
-	//Write your code here
-	
+	line_up.push_back("Luffy");
+	line_up.push_back("Sanji");
+	line_up.push_back("Nami");
+
+	for (int i = 0;i<2;i++){
+		loc = line_up.begin();
+		line_up.erase(loc);
+	}
+	loc = line_up.begin(); loc ++ ; loc ++ ;
+	line_up.insert(loc,"Narutu");
+
+	line_up.push_front("Prayath");
+
+	loc -- ; loc -- ; loc -- ;
+	line_up.insert(loc,"Tony");
+
+	line_up.erase(loc);
+
+	for (int i = 0;i<3;i++){
+		loc = line_up.begin();
+		line_up.erase(loc);
+	}
+
 	printList(line_up);
 		
 	return 0;
